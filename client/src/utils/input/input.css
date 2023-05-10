@@ -1,5 +1,32 @@
 input {
   border: none;
   border-bottom: #2c111c solid 3px;
+  background: transparent;
+  width: 100%;
+  padding: 3px;
+}
+input:focus {
+  outline: none;
+  transform: scale(1.008);
+}
+::-webkit-input-placeholder {
+  /* Chrome */
+  color: #2c111c;
+  font-weight: 700;
+}
+:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #2c111c;
+  font-weight: 700;
+}
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #2c111c;
+  font-weight: 700;
+}
+:-moz-placeholder {
+  /* Firefox 4 - 18 */
+  color: #2c111c;
+  font-weight: 700;
 }
 /*# sourceMappingURL=input.css.map */
