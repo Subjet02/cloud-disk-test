@@ -1,0 +1,5 @@
+{
+  "serverPort" : 5000,
+  "dbUrl" : "mongodb+srv://denis105q:HUbl9rV7V22EpXmD@clouden.q5b26ox.mongodb.net/?retryWrites=true&w=majority",
+  "secretKey": "Asuna59QArcher"
+}
