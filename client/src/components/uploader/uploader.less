@@ -1,0 +1,81 @@
+@import "../../utils/colors";
+
+.uploader {
+  height: 300px;
+  width: 300px;
+  position: fixed;
+  background-color: bisque;
+  bottom: 0;
+  right: 0;
+  padding: 20px;
+  border-radius: 12px;
+  overflow-y: auto;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__title {
+    color: @background-color;
+    font-size: 1.2rem;
+  }
+  &__close {
+    padding: 3px;
+    background-color: transparent;
+    border: 0;
+    font-size: 19px;
+  }
+}
+
+
+.upload-file {
+  background-color: @background-color;
+  border-radius: 8px;
+  margin: 5px 0;
+  padding: 5px 10px;
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    position: relative;
+    max-width: 27ch;
+  }
+
+  &__header::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    /* ширина элемента &__remove */
+     /* цвет элемента &__remove, замените на нужный вам */
+  }
+  &__remove {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+     /* ширина элемента &__remove, должна быть такой же, как и в :after */
+  }
+
+
+  &__progress-bar {
+    height: 1rem;
+    border-radius: 8px;
+    background-color: @font-color;
+    display: flex;
+    margin: 3px 0;
+  }
+
+  &__upload-bar {
+    background-color: skyblue;
+    border-radius: 8px;
+  }
+  &__percent {
+    color: @background-color;
+    left: 50%;
+    position: absolute;
+  }
+}
