@@ -1,7 +1,6 @@
 const fs = require('fs')
 const File = require('../models/File')
 const config =require('config')
-const fse = require('fs-extra')
 
 class FileService{
 
@@ -21,18 +20,6 @@ try {
         }))
     }
 
-    deleteFile(file) {
-        const path = this.getPath(file)
-        if (file.type === 'dir') {
-            fse.removeSync(path)
-        } else {
-            fs.unlinkSync(path)
-        }
-    }
-
-    getPath(file) {
-        return config.get('filePath') + '\\' + file.user + '\\' + file.path
-    }
 }
 
 module.exports = new FileService()
